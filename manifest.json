@@ -1,0 +1,44 @@
+{
+  "name": "AutoLoginForDev",
+  "version": "0.0.1",
+  "description": "帮助开发人员自动填写账号密码，快速登录",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "homepage_url": "",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/psw16.png",
+      "32": "images/psw32.png",
+      "48": "images/psw64.png",
+      "128": "images/psw128.png"
+    }
+  },
+  "content_script": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/psw16.png",
+    "32": "images/psw32.png",
+    "48": "images/psw64.png",
+    "128": "images/psw128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "default_locale": "zh_CN",
+  "manifest_version": 2
+}
