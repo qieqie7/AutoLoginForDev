@@ -7,7 +7,7 @@
     "declarativeContent",
     "storage"
   ],
-  "homepage_url": "",
+  "homepage_url": "https://github.com/ykst615/AutoLoginForDev",
   "background": {
     "scripts": [
       "background.js"
