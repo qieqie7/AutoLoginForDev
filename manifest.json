@@ -23,7 +23,7 @@
       "128": "images/psw128.png"
     }
   },
-  "content_script": [
+  "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
@@ -39,6 +39,5 @@
     "page": "options.html",
     "chrome_style": true
   },
-  "default_locale": "zh_CN",
   "manifest_version": 2
 }
