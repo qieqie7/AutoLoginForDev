@@ -3,6 +3,8 @@
  * @Author: ykst
  * @Date: 2019-08-04 16:35:45
  * @LastEditors: ykst
- * @LastEditTime: 2019-08-04 16:36:00
+ * @LastEditTime: 2019-08-04 17:11:14
  */
-console.log(1);
+console.log('window', window);
+
+console.log(document.getElementsByClassName('global-component-box'));
