@@ -3,7 +3,7 @@
  * @Author: ykst
  * @Date: 2019-08-04 00:19:05
  * @LastEditors: ykst
- * @LastEditTime: 2019-08-04 16:19:26
+ * @LastEditTime: 2019-08-04 20:35:10
  */
 // Copyright 2018 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
@@ -83,6 +83,18 @@ function handleListItem(event) {
     const username = target.dataset.username;
     const password = target.dataset.password;
     console.log(username, password);
+
+    chrome.tabs.query({
+      active: true,
+      currentWindow: true,
+    }, function(tabs) {
+      if(Array.isArray(tabs) && tabs[0]) {
+        const targetWindow = tabs[0];
+        chrome.tabs.sendMessage(targetWindow.id, { username, password }, function(response) {
+          console.log(`来自content-scripts的回复：${response}`);
+        })
+      }
+    })
   }
 }
 

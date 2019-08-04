@@ -21,7 +21,8 @@
       "32": "images/psw32.png",
       "48": "images/psw64.png",
       "128": "images/psw128.png"
-    }
+    },
+    "default_title": "自动登录——为前端开发者准备"
   },
   "content_scripts": [
     {
