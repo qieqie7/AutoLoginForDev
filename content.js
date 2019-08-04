@@ -3,7 +3,7 @@
  * @Author: ykst
  * @Date: 2019-08-04 16:35:45
  * @LastEditors: ykst
- * @LastEditTime: 2019-08-04 21:03:33
+ * @LastEditTime: 2019-08-04 21:14:06
  */
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -21,7 +21,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         passwordDom = dom;
         const preIndex = index - 1;
         if(inputList[preIndex]) {
-          username = inputList[preIndex];
+          usernameDom= inputList[preIndex];
         }
       }
     })
